@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="270" viewBox="0 0 900 270" role="img" aria-label="Featured project KeySwitchFix">
+<defs>
+  <radialGradient id="flare" cx="82%" cy="47%" r="57%">
+    <stop offset="0" stop-color="#ff4d3d" stop-opacity=".20"/>
+    <stop offset=".48" stop-color="#ff8a1f" stop-opacity=".07"/>
+    <stop offset="1" stop-color="#090708" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="line"><stop stop-color="#ff4d3d"/><stop offset=".5" stop-color="#ff8a1f"/><stop offset="1" stop-color="#ffc857"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <style>
+    .title{font:700 36px 'Trebuchet MS',sans-serif;fill:#fff4e6;letter-spacing:-.6px}
+    .label{font:700 9px 'Trebuchet MS',sans-serif;fill:#ff8a1f;letter-spacing:1.7px}
+    .body{font:13px 'Trebuchet MS',sans-serif;fill:#bda7a2}
+    .tag{font:700 10px 'Trebuchet MS',sans-serif;fill:#fff4e6}
+    .key{font:700 21px 'Trebuchet MS',sans-serif;fill:#fff4e6}
+    .metric{font:700 22px 'Trebuchet MS',sans-serif;fill:#fff4e6}
+    .small{font:9px 'Trebuchet MS',sans-serif;fill:#bda7a2;letter-spacing:1px}
+    .cta{font:700 10px 'Trebuchet MS',sans-serif;fill:#ffc857;letter-spacing:1.3px}
+    @keyframes pulse{0%,100%{opacity:.25;transform:translateX(0)}50%{opacity:1;transform:translateX(54px)}}
+    .pulse{animation:pulse 2.6s ease-in-out infinite}
+    @media(prefers-reduced-motion:reduce){.pulse{animation:none}}
+  </style>
+</defs>
+<rect width="900" height="270" rx="26" fill="#171012"/>
+<rect x="7" y="7" width="886" height="256" rx="21" fill="#0f0b0c" stroke="#4b2524"/>
+<rect x="7" y="7" width="886" height="256" rx="21" fill="url(#flare)"/>
+<path d="M29 42h842" stroke="url(#line)"/>
+<text x="31" y="39" class="label">FEATURED PROJECT / WINDOWS UTILITY</text>
+<rect x="786" y="21" width="83" height="25" rx="12.5" fill="#211315" stroke="#66302b"/>
+<text x="827.5" y="38" text-anchor="middle" class="tag">v2.7.0</text>
+
+<text x="40" y="96" class="title">KeySwitchFix</text>
+<text x="40" y="126" class="body">Automatic Persian / English keyboard layout repair for Windows.</text>
+<text x="40" y="151" class="body">Native Win32 C. Local-only processing. No telemetry. No cloud.</text>
+
+<g transform="translate(40 183)"><rect width="103" height="28" rx="14" fill="#140e0f" stroke="#4d2523"/><text x="51.5" y="18.5" text-anchor="middle" class="tag">WINDOWS x64</text></g>
+<g transform="translate(152 183)"><rect width="83" height="28" rx="14" fill="#140e0f" stroke="#4d2523"/><text x="41.5" y="18.5" text-anchor="middle" class="tag">NATIVE C</text></g>
+<g transform="translate(244 183)"><rect width="130" height="28" rx="14" fill="#140e0f" stroke="#4d2523"/><text x="65" y="18.5" text-anchor="middle" class="tag">OFFLINE + PRIVATE</text></g>
+<text x="40" y="242" class="cta">OPEN PROJECT</text>
+<path d="M121 238h24m-7-7 7 7-7 7" fill="none" stroke="#ffc857" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+<g transform="translate(548 69)">
+  <rect width="303" height="169" rx="18" fill="#140e0f" stroke="#4d2523"/>
+  <text x="20" y="27" class="label">LAYOUT CORRECTION ENGINE</text>
+  <g transform="translate(22 45)"><rect width="76" height="56" rx="13" fill="#211315" stroke="#66302b"/><text x="38" y="35" text-anchor="middle" class="key">FA</text></g>
+  <g transform="translate(205 45)"><rect width="76" height="56" rx="13" fill="#211315" stroke="#66302b"/><text x="38" y="35" text-anchor="middle" class="key">EN</text></g>
+  <path d="M118 67h64" stroke="#5d2925" stroke-width="2" stroke-linecap="round"/>
+  <path d="M174 61l9 6-9 6" fill="none" stroke="#ffc857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M183 83h-64" stroke="#5d2925" stroke-width="2" stroke-linecap="round"/>
+  <path d="M127 77l-9 6 9 6" fill="none" stroke="#ff8a1f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="123" cy="67" r="4" fill="#ff4d3d" filter="url(#glow)" class="pulse"/>
+  <line x1="20" y1="116" x2="283" y2="116" stroke="#351919"/>
+  <text x="22" y="143" class="metric">159K+</text>
+  <text x="22" y="158" class="small">OFFLINE SPELLINGS</text>
+  <text x="182" y="143" class="metric">LOCAL</text>
+  <text x="182" y="158" class="small">PROCESSING ONLY</text>
+</g>
+</svg>
