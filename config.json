@@ -3,9 +3,5 @@
   "name": "Sam Aliyan",
   "role": "Oracle Database Administrator",
   "location": "Australia",
-  "status": "",
-  "website": "",
-  "focus": "",
-  "skills": [],
-  "featured_repos": []
+  "featured_repos": ["KeySwitchFix"]
 }
