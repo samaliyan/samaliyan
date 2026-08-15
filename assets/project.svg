@@ -16,9 +16,6 @@
     .metric{font:700 22px 'Trebuchet MS',sans-serif;fill:#fff4e6}
     .small{font:9px 'Trebuchet MS',sans-serif;fill:#bda7a2;letter-spacing:1px}
     .cta{font:700 10px 'Trebuchet MS',sans-serif;fill:#ffc857;letter-spacing:1.3px}
-    @keyframes pulse{0%,100%{opacity:.25;transform:translateX(0)}50%{opacity:1;transform:translateX(54px)}}
-    .pulse{animation:pulse 2.6s ease-in-out infinite}
-    @media(prefers-reduced-motion:reduce){.pulse{animation:none}}
   </style>
 </defs>
 <rect width="900" height="270" rx="26" fill="#171012"/>
@@ -42,13 +39,45 @@
 <g transform="translate(548 69)">
   <rect width="303" height="169" rx="18" fill="#140e0f" stroke="#4d2523"/>
   <text x="20" y="27" class="label">LAYOUT CORRECTION ENGINE</text>
-  <g transform="translate(22 45)"><rect width="76" height="56" rx="13" fill="#211315" stroke="#66302b"/><text x="38" y="35" text-anchor="middle" class="key">FA</text></g>
-  <g transform="translate(205 45)"><rect width="76" height="56" rx="13" fill="#211315" stroke="#66302b"/><text x="38" y="35" text-anchor="middle" class="key">EN</text></g>
-  <path d="M118 67h64" stroke="#5d2925" stroke-width="2" stroke-linecap="round"/>
-  <path d="M174 61l9 6-9 6" fill="none" stroke="#ffc857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M183 83h-64" stroke="#5d2925" stroke-width="2" stroke-linecap="round"/>
-  <path d="M127 77l-9 6 9 6" fill="none" stroke="#ff8a1f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="123" cy="67" r="4" fill="#ff4d3d" filter="url(#glow)" class="pulse"/>
+
+  <g transform="translate(22 45)">
+    <rect width="76" height="56" rx="13" fill="#211315" stroke="#66302b">
+      <animate attributeName="stroke" values="#66302b;#66302b;#ff8a1f;#66302b" keyTimes="0;0.72;0.88;1" dur="3.8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="38" y="35" text-anchor="middle" class="key">FA</text>
+  </g>
+
+  <g transform="translate(205 45)">
+    <rect width="76" height="56" rx="13" fill="#211315" stroke="#66302b">
+      <animate attributeName="stroke" values="#66302b;#ffc857;#66302b;#66302b" keyTimes="0;0.42;0.58;1" dur="3.8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="38" y="35" text-anchor="middle" class="key">EN</text>
+  </g>
+
+  <!-- closed correction loop: FA -> EN on top, EN -> FA on bottom -->
+  <path d="M118 66 H181 C195 66 195 86 183 86 H120 C106 86 106 66 118 66" fill="none" stroke="#351919" stroke-width="6" stroke-linecap="round"/>
+  <path d="M118 66 H181" fill="none" stroke="#5d2925" stroke-width="2.3" stroke-linecap="round"/>
+  <path d="M183 86 H120" fill="none" stroke="#5d2925" stroke-width="2.3" stroke-linecap="round"/>
+
+  <g>
+    <path d="M173 60l10 6-10 6" fill="none" stroke="#ffc857" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <animate attributeName="opacity" values="1;1;.28;.28;1" keyTimes="0;.44;.52;.94;1" dur="3.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M129 80l-10 6 10 6" fill="none" stroke="#ff8a1f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <animate attributeName="opacity" values=".28;.28;1;1;.28" keyTimes="0;.44;.52;.94;1" dur="3.8s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <circle r="5" fill="#ffc857" filter="url(#glow)">
+    <animateMotion dur="3.8s" repeatCount="indefinite" path="M118 66 H181 C195 66 195 86 183 86 H120 C106 86 106 66 118 66"/>
+    <animate attributeName="fill" values="#ffc857;#ffc857;#ff8a1f;#ff8a1f;#ffc857" keyTimes="0;.44;.52;.94;1" dur="3.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="10" fill="none" stroke="#ffc857" stroke-width="1.2" opacity=".18">
+    <animateMotion dur="3.8s" repeatCount="indefinite" path="M118 66 H181 C195 66 195 86 183 86 H120 C106 86 106 66 118 66"/>
+    <animate attributeName="stroke" values="#ffc857;#ffc857;#ff8a1f;#ff8a1f;#ffc857" keyTimes="0;.44;.52;.94;1" dur="3.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".08;.28;.12;.28;.08" dur="1.9s" repeatCount="indefinite"/>
+  </circle>
+
   <line x1="20" y1="116" x2="283" y2="116" stroke="#351919"/>
   <text x="22" y="143" class="metric">159K+</text>
   <text x="22" y="158" class="small">OFFLINE SPELLINGS</text>
