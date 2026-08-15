@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero.svg" width="900" alt="Sam Aliyan — Oracle Database Administrator" />
+<img src="./assets/hero-clean.svg" width="900" alt="Sam Aliyan — Oracle Database Administrator" />
 
 <br><br>
 
